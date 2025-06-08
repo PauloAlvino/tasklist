@@ -201,3 +201,23 @@ main {
   left: 10px;
   color: var(--white);
 }
+
+@media (max-width: 600px) {
+  main {
+    max-width: 400px;
+  }
+  form {
+    flex-direction: column;
+  }
+  h1 {
+    display: block;
+    text-align: center;
+  }
+  .logo {
+    font-size: 4rem;
+    &::before {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}
