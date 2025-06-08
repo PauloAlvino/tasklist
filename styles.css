@@ -8,8 +8,6 @@
   --backgrond: #f4f5fb;
   --brand-color: rgb(212, 20, 20);
   --brand-color-hover: rgb(255, 67, 67);
-  --color-error: red;
-  --color-response: rgb(94, 252, 94);
   --primary: rgb(10, 10, 10);
   --secondary: rgb(66, 61, 61);
   --terciary: rgb(179, 179, 179);
@@ -17,8 +15,6 @@
   --font-family: "Roboto Mono", monospace;
   --title: 700 24px/200% var(--font-family);
   --label: 600 16px/125% var(--font-family);
-  --paragraph: 500 16px/125% var(--font-family);
-  --link: 500 14px/100% var(--font-family);
 }
 
 h1 {
@@ -128,25 +124,25 @@ main {
   display: flex;
   align-items: center;
   background-color: var(--white);
-  box-shadow: 0 0 .8rem var(--terciary);
+  box-shadow: 0 0 0.8rem var(--terciary);
   gap: 0.5rem;
 }
 .check {
   transform: scale(1.5);
-  appearance: none;      
+  appearance: none;
   background-color: white;
-  border: 1px solid var(--primary);  
-  width: .8rem;
-  height: .8rem;
-  border-radius: 4px;    
+  border: 1px solid var(--primary);
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 4px;
   position: relative;
 }
 
 .check:checked::before {
-  content: '✔';
+  content: "✔";
   display: block;
   text-align: center;
-  font-size: .75rem;
+  font-size: 0.75rem;
   color: var(--brand-color);
   position: absolute;
   left: 0;
@@ -154,8 +150,8 @@ main {
   right: 0;
 }
 .taskName {
-    margin-left: .5rem;
-    text-transform: uppercase;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
 }
 .trash {
   display: inline-block;
@@ -164,4 +160,44 @@ main {
   width: 32px;
   margin-left: auto;
   cursor: pointer;
+}
+
+.massRemove {
+  display: none;
+  padding: 1rem 2rem;
+  background-color: var(--brand-color);
+  border-radius: 0.5rem;
+  color: var(--white);
+  transition: background 0.5s ease border-color 0.5s ease;
+  margin-top: 1rem;
+}
+.massRemove:hover {
+  background-color: var(--brand-color-hover);
+  box-shadow: 0 0 6px var(--brand-color-hover);
+}
+
+.result {
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: start;
+  margin-top: 1rem;
+  color: var(--white);
+}
+
+.exit {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+  margin-left: auto;
+}
+
+.exit::before {
+  content: "X";
+  position: absolute;
+  font-size: 1.3rem;
+  top: 3px;
+  left: 10px;
+  color: var(--white);
 }
